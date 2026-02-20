@@ -3,89 +3,279 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Portfolio</title>
+    <title>Roza — Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
     <header class="header">
       <div class="container nav">
-        <a class="brand" href="#Home">MyPorto</a>
+        <a class="brand" href="#Home">roza.</a>
 
-        <nav class="menu">
-          <a href="#Home">Home</a>
-          <a href="#About">About</a>
-          <a href="#Projects">Projects</a>
-          <a href="#Contact">Contact</a>
+        <!-- Desktop menu -->
+        <nav class="menu desktop" aria-label="Primary">
+          <a class="link" href="#Home">Home</a>
+          <a class="link" href="#About">About</a>
+          <a class="link" href="#Projects">Projects</a>
+          <a class="link" href="#Contact">Contact</a>
         </nav>
+
+        <div class="nav-actions">
+          <a class="btn small desktop" href="#Contact">Hire me</a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            class="icon-btn mobile"
+            id="openMenu"
+            aria-label="Open menu"
+            aria-controls="mobileDrawer"
+            aria-expanded="false"
+          >
+            <span class="burger" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- SECTIONS -->
-    <main>
-      <section id="Home" class="section hero">
-        <div class="container">
-          <p class="tag">Hi, saya</p>
-          <h1 class="title">Roza</h1>
-          <p class="subtitle">Frontend / Web Developer</p>
+    <!-- Mobile Drawer -->
+    <div class="drawer-backdrop" id="backdrop" hidden></div>
+    <aside class="drawer" id="mobileDrawer" aria-label="Mobile menu" hidden>
+      <div class="drawer-head">
+        <span class="drawer-title">Menu</span>
+        <button class="icon-btn" id="closeMenu" aria-label="Close menu">
+          <span class="x" aria-hidden="true"></span>
+        </button>
+      </div>
 
-          <div class="cta">
-            <a class="btn primary" href="#Projects">Lihat Project</a>
-            <a class="btn" href="#Contact">Kontak</a>
+      <nav class="menu mobile-menu" aria-label="Mobile Primary">
+        <a class="link" href="#Home">Home</a>
+        <a class="link" href="#About">About</a>
+        <a class="link" href="#Projects">Projects</a>
+        <a class="link" href="#Contact">Contact</a>
+      </nav>
+
+      <div class="drawer-foot">
+        <a class="btn primary" href="#Contact">Hire me</a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- HOME -->
+      <section id="Home" class="section hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">Frontend / Web Developer</p>
+            <h1 class="h1">Bangun website cepat, rapi, dan responsif.</h1>
+            <p class="lead">
+              Saya fokus bikin landing page & portfolio yang ringan, modern, dan
+              siap deploy (Netlify/GitHub).
+            </p>
+
+            <div class="cta">
+              <a class="btn primary" href="#Projects">Lihat Projects</a>
+              <a class="btn" href="#Contact">Kontak</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer"
+                >Download CV</a
+              >
+            </div>
+
+            <div class="chips" aria-label="Skills">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive</span>
+              <span class="chip">Netlify</span>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Profile card">
+            <!-- Avatar pakai foto -->
+            <img
+              class="avatar-img"
+              src="profile.jpg"
+              alt="Foto Roza"
+              loading="lazy"
+            />
+            <div class="hero-card-text">
+              <h2 class="h2">Roza</h2>
+              <p class="muted">Based in Indonesia • Open for freelance</p>
+              <div class="mini">
+                <a class="mini-link" href="#Projects">Projects</a>
+                <span class="dot">•</span>
+                <a class="mini-link" href="#Contact">Contact</a>
+                <span class="dot">•</span>
+                <a class="mini-link" href="#About">About</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section id="About" class="section">
         <div class="container">
-          <h2>About</h2>
-          <p>Tulis deskripsi singkat tentang kamu, skill, dan fokus kamu.</p>
+          <div class="section-head">
+            <h2 class="h2">About</h2>
+            <p class="muted">Sedikit tentang saya & apa yang saya kerjakan.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="panel">
+              <h3 class="h3">Ringkas</h3>
+              <p class="muted">
+                Saya suka bikin UI yang bersih, minimalis, dan nyaman dilihat.
+                Prioritas saya: performa, struktur rapi, dan mobile-friendly.
+              </p>
+            </div>
+
+            <div class="panel">
+              <h3 class="h3">Yang bisa saya bantu</h3>
+              <ul class="list">
+                <li>Landing page / portfolio 1 halaman</li>
+                <li>Optimasi layout mobile</li>
+                <li>Deploy GitHub → Netlify (auto deploy)</li>
+                <li>Perapihan UI + animasi halus</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- PROJECTS -->
       <section id="Projects" class="section">
         <div class="container">
-          <h2>Projects</h2>
+          <div class="section-head">
+            <h2 class="h2">Projects</h2>
+            <p class="muted">
+              Beberapa contoh project (isi link demo & repo kamu).
+            </p>
+          </div>
 
           <div class="grid">
             <article class="card">
-              <h3>Project 1</h3>
-              <p>Deskripsi singkat project.</p>
-              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+              <div class="card-top">
+                <h3 class="h3">Simple Landing</h3>
+                <span class="badge">HTML</span>
+              </div>
+              <p class="muted">Landing page cepat untuk promosi produk/jasa.</p>
+              <div class="card-links">
+                <a href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
             </article>
 
             <article class="card">
-              <h3>Project 2</h3>
-              <p>Deskripsi singkat project.</p>
-              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+              <div class="card-top">
+                <h3 class="h3">Portfolio One Page</h3>
+                <span class="badge">CSS</span>
+              </div>
+              <p class="muted">Portfolio anchor scroll (#Home, #About, dst).</p>
+              <div class="card-links">
+                <a href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
             </article>
 
             <article class="card">
-              <h3>Project 3</h3>
-              <p>Deskripsi singkat project.</p>
-              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+              <div class="card-top">
+                <h3 class="h3">Mini UI Kit</h3>
+                <span class="badge">JS</span>
+              </div>
+              <p class="muted">Komponen tombol, card, chip, dan layout grid.</p>
+              <div class="card-links">
+                <a href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT (Netlify Forms) -->
       <section id="Contact" class="section">
         <div class="container">
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:kamu@email.com">kamu@email.com</a></p>
-          <p>
-            Instagram:
-            <a href="#" target="_blank" rel="noreferrer">@username</a>
-          </p>
+          <div class="section-head">
+            <h2 class="h2">Contact</h2>
+            <p class="muted">Kalau mau kerja sama, kirim pesan di sini.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="panel">
+              <h3 class="h3">Info</h3>
+              <p class="muted">
+                Email: <a href="mailto:kamu@email.com">kamu@email.com</a>
+              </p>
+              <p class="muted">WhatsApp: <a href="#">+62xxxxxxxxxx</a></p>
+              <p class="muted">
+                LinkedIn:
+                <a href="#" target="_blank" rel="noreferrer">profil kamu</a>
+              </p>
+            </div>
+
+            <!-- IMPORTANT:
+               - data-netlify="true" aktifin Netlify Forms
+               - name="contact" wajib konsisten
+               - input hidden form-name wajib ada
+          -->
+            <form
+              class="panel form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/success.html"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>Jangan isi ini: <input name="bot-field" /></label>
+              </p>
+
+              <h3 class="h3">Kirim Pesan</h3>
+
+              <label class="field">
+                <span>Nama</span>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Nama kamu"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="email@domain.com"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span>Pesan</span>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Tulis pesan..."
+                  required
+                ></textarea>
+              </label>
+
+              <button class="btn primary" type="submit">Kirim</button>
+              <p class="tiny muted">
+                Pesan akan masuk ke Netlify Dashboard → Forms.
+              </p>
+            </form>
+          </div>
+
+          <footer class="footer">
+            <small class="muted"
+              >© <span id="year"></span> roza. Built with HTML/CSS.</small
+            >
+          </footer>
         </div>
       </section>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <small>© <span id="year"></span> My Portfolio</small>
-      </div>
-    </footer>
 
     <script src="script.js"></script>
   </body>
