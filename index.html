@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#Home">MyPorto</a>
+
+        <nav class="menu">
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECTIONS -->
+    <main>
+      <section id="Home" class="section hero">
+        <div class="container">
+          <p class="tag">Hi, saya</p>
+          <h1 class="title">Roza</h1>
+          <p class="subtitle">Frontend / Web Developer</p>
+
+          <div class="cta">
+            <a class="btn primary" href="#Projects">Lihat Project</a>
+            <a class="btn" href="#Contact">Kontak</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="About" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>Tulis deskripsi singkat tentang kamu, skill, dan fokus kamu.</p>
+        </div>
+      </section>
+
+      <section id="Projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+
+          <div class="grid">
+            <article class="card">
+              <h3>Project 1</h3>
+              <p>Deskripsi singkat project.</p>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </article>
+
+            <article class="card">
+              <h3>Project 2</h3>
+              <p>Deskripsi singkat project.</p>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </article>
+
+            <article class="card">
+              <h3>Project 3</h3>
+              <p>Deskripsi singkat project.</p>
+              <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="Contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:kamu@email.com">kamu@email.com</a></p>
+          <p>
+            Instagram:
+            <a href="#" target="_blank" rel="noreferrer">@username</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small>© <span id="year"></span> My Portfolio</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
