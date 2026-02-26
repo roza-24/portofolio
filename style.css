@@ -398,22 +398,24 @@ a {
   flex-direction: column;
 }
 .project-thumb {
-  height: 120px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background:
-    radial-gradient(
-      circle at 30% 30%,
-      rgba(168, 85, 247, 0.25),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 70% 70%,
-      rgba(236, 72, 153, 0.18),
-      transparent 55%
-    ),
-    #fafafa;
-  margin-bottom: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.35);
+  aspect-ratio: 16 / 9;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
 }
 .project-thumb.tall {
   height: 170px;
